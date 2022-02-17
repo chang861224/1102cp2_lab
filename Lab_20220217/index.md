@@ -57,6 +57,11 @@ Feb 17, 2022
     - 參考資料
 
 - LeetCode
+    - 辦個帳號來玩玩看吧
+
+- 歡樂的解題時間(?)
+    - LeetCode 1. Two Sum
+    - OJ
 
 ---
 
@@ -345,3 +350,48 @@ ssh-rsa ................................................ Chi-Hung Chang @cch20-p
 ## 題目列表之很多的題目
 
 ![center h:450](../assets/leetcode-problems.png)
+
+有興趣，閒閒沒事做的時候就可以隨便找幾題來寫～（追隨老師的腳步XD）
+或者可以每天寫一題系統隨機跳出來的隨機任務～
+
+---
+
+# 歡樂的解題時間
+
+- LeetCode 1. Two Sum
+
+- OJ
+
+---
+
+## [LeetCode 1. Two Sum](https://leetcode.com/problems/two-sum/)
+
+給你一個數字的陣列，以及一個 target neumber，你的目標是要在這個數字陣列中找出兩個元素（不能重複取），其相加結果會等於 target number，並回傳這兩個元素的 index。
+
+- 範例輸入：`nums = [2,7,11,15], target = 9`
+- 範例輸出：`[0,1]`
+
+題目限制：
+
+- `1 <= nums,length <= 10^4`
+- `-10^9 <= nums[i] <= 10^9`
+- `-10^9 <= target <= 10^9`
+- 只會有唯一一組解！
+
+特別注意：題目是要你寫一個 solution 的 function，不是要你寫出整組程式！
+
+---
+
+## LeetCode 1. Two Sum
+
+解題思路
+
+1. Brute force：兩層 for 迴圈，遇到相加等於 target number 時就回傳
+
+    - 時間複雜度：$O(n^2)$
+    - 空間複雜度：$O(1)$
+
+2. hash table：先計算每個數字各出現幾次，再看哪兩個數字和等於 target number
+
+    - 時間複雜度：$O(n)$
+    - 空間複雜度：$O(n)$
