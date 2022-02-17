@@ -263,3 +263,16 @@ branch.main.merge=refs/heads/main
 
 # LeetCode
 
+[https://leetcode.com/](https://leetcode.com/)
+
+---
+
+## 申請一個帳號
+
+![center h:450](../assets/leetcode-signup.png)
+
+---
+
+## 題目列表之很多的題目
+
+![center h:450](../assets/leetcode-problems.png)
