@@ -247,6 +247,14 @@ branch.main.merge=refs/heads/main
 
 ---
 
+## 基本操作
+
+接下來再去你的 GitHub 的這個資料夾，就可以看到你上傳的檔案
+
+![center h:450](../assets/github-repo-uploaded.png)
+
+---
+
 ## 設定 SSH-KEY
 
 不知從何時開始，GitHub 不在能用 HTTPS 進行上傳，因此需要先設定 SSH-KEY 才能用 CLI 進行上傳
