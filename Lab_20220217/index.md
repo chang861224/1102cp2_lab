@@ -10,6 +10,10 @@ date: 2022-02-17
 paginate: true 
 ---
 
+<!--
+  backgroundImage: "linear-gradient(to bottom, #C4E1FF, #84C1FF)"
+-->
+
 <style>
 h2{
     position: fixed;
@@ -325,11 +329,29 @@ ssh-rsa ................................................ Chi-Hung Chang @cch20-p
     git log
     ```
 
+    ```bash
+    (^o^) [cch] [~/Documents/1102cp2] $ git log
+    commit cc1632b294d9460864c459c393796012bb1a6bc1 (HEAD -> main, origin/main, origin/HEAD)
+    Author: Chi-Hung Chang <chihung861224@gmail.com>
+    Date:   Thu Feb 17 01:53:40 2022 +0800
+
+        add hellow world
+
+    commit ac0ce95c6c8e70bf0790a013ca1b7e55fe6f9091
+    Author: Chi-Hung Chang <chihung861224@gmail.com>
+    Date:   Wed Feb 16 21:35:17 2022 +0800
+
+        Initial commit
+    (^o^) [cch] [~/Documents/1102cp2] $
+    ```
+
 ---
 
 ## 參考資料
 
 - [1.6 開始 - 初次設定 Git](https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-%E5%88%9D%E6%AC%A1%E8%A8%AD%E5%AE%9A-Git)
+
+- [2.3 Git 基礎 - 檢視提交的歷史記錄](https://git-scm.com/book/zh-tw/v2/Git-%E5%9F%BA%E7%A4%8E-%E6%AA%A2%E8%A6%96%E6%8F%90%E4%BA%A4%E7%9A%84%E6%AD%B7%E5%8F%B2%E8%A8%98%E9%8C%84)
 
 - [連猴子都能懂的 Git 入門指南](https://backlog.com/git-tutorial/tw/intro/intro1_1.html)
 
@@ -366,9 +388,9 @@ ssh-rsa ................................................ Chi-Hung Chang @cch20-p
 
 # 歡樂的解題時間
 
-- LeetCode 1. Two Sum
+- LeetCode
 
-- OJ
+- Online Judge
 
 ---
 
@@ -403,3 +425,44 @@ ssh-rsa ................................................ Chi-Hung Chang @cch20-p
 
     - 時間複雜度：$O(n)$
     - 空間複雜度：$O(n)$
+
+---
+
+## [Online Judge 越大我越愛](https://oj.ebg.tw/contest/83/problem/1102CP2%20Assign01)
+
+有 `n` 個數字存放於陣列 `a` 內，現在想要找兩個數字，`i` 跟 `j`（`i < j`），使得 `a[i] - a[j]` 越大越好。
+
+- 輸入說明
+    
+    - 第一行有個數字 `n`，代表現在有 `n` 個數字
+    - 接下來一行 `a[1] , a[2] .... , a[n]`
+
+- 輸出說明
+
+    - `a[i] - a[j]` 的最大值
+
+---
+
+## Online Judge 越大我越愛
+
+- 範例輸入
+    ```
+    5
+    5 4 3 2 1
+    ```
+
+- 範例輸出
+    ```
+    4
+    ```
+
+題目限制：
+
+- `2 <= n <= 100000`
+- `1 <= a[i], a[j] <= 100000`
+- `i < j`
+
+---
+
+# Any Question?
+
