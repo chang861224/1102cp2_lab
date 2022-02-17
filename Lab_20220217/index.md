@@ -242,6 +242,69 @@ branch.main.merge=refs/heads/main
 
 ---
 
+## 設定 SSH-KEY
+
+不知從何時開始，GitHub 不在能用 HTTPS 進行上傳，因此需要先設定 SSH-KEY 才能用 CLI 進行上傳
+```bash
+ssh-keygen -t rsa -C <your_email>
+```
+
+```bash
+(^o^) [cch] [~/Documents/1102cp2] $ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Chi-Hung Chang/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /c/Users/Chi-Hung Chang/.ssh/id_rsa 
+Your public key has been saved in /c/Users/Chi-Hung Chang/.ssh/id_rsa.pub 
+The key fingerprint is:
+SHA256:5cqcb9PnoVsED9KJZfxe/cwgcaytI6F6N1HPgXqi28k Chi-Hung Chang@cch20-pc
+The key's randomart image is:
+```
+
+---
+
+## 設定 SSH-KEY
+
+在家目錄底下就會出現一個 `.ssh` 資料夾，裡面有兩個檔案，其中 `id_rsa.pub` 存的是 SSH 金鑰
+```bash
+(^o^) [cch] [~/Documents/1102cp2] $ cd ~/.ssh
+(^o^) [cch] [~/.ssh] $ ls -l
+-rw-r--r--  1 cch cch  2610 Feb 17 12:44 id_rsa
+-rw-r--r--  1 cch cch   577 Feb 17 12:44 id_rsa.pub
+(^o^) [cch] [~/.ssh] $ cat id_rsa.pub
+ssh-rsa ................................................ Chi-Hung Chang @cch20-pc
+(^o^) [cch] [~/.ssh] $
+```
+
+---
+
+## 設定 SSH-KEY
+
+- 在你的 GitHub 帳號點選 `setting` （在右上角個人帳號點下去的倒數第二個）
+
+- 點選左側的 `SSH and GPG Keys`
+
+![center h:400](../assets/github-sshkey-before.png)
+
+---
+
+## 設定 SSH-KEY
+
+點選右上角綠色的 `New SSH key`，並將剛剛在 `id_rsa.pub` 內的 SSH 金鑰複製進去
+
+![center h:450](../assets/github-sshkey-add.png)
+
+---
+
+## 設定 SSH-KEY
+
+完成後按 `Add SSH key`，就會回到 SSH keys的頁面，你剛剛新增的 SSH key 也會出現（如果一切正常的話啦）
+
+![center h:400](../assets/github-sshkey-after.png)
+
+---
+
 ## 基本操作
 
 - 查看版本歷史紀錄
@@ -254,9 +317,15 @@ branch.main.merge=refs/heads/main
 ## 參考資料
 
 - [1.6 開始 - 初次設定 Git](https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-%E5%88%9D%E6%AC%A1%E8%A8%AD%E5%AE%9A-Git)
+
 - [連猴子都能懂的 Git 入門指南](https://backlog.com/git-tutorial/tw/intro/intro1_1.html)
+
 - [Git 與 GitHub 版本控制基本指令與操作入門教學](https://blog.techbridge.cc/2018/01/17/learning-programming-and-coding-with-python-git-and-github-tutorial/)
+
 - [30 天精通 Git 版本控管](https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/README.md)
+
+- [vscode 中利用 git 通過 ssh 連線 github 的方法](https://www.itread01.com/article/1510281098.html)
+
 - [Git Tutorial](https://git-scm.com/docs/gittutorial)
 
 ---
