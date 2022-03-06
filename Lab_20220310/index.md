@@ -1,0 +1,123 @@
+---
+marp: true
+title: Computer Programming II Lab 
+description: Git accounts sign up
+author: Chi-Hung Chang
+keywords: git GitHub
+url:
+image: 
+date: 2022-02-17
+paginate: true 
+---
+
+<!--
+  backgroundImage: "linear-gradient(to bottom, #C4E1FF, #84C1FF)"
+-->
+
+<style>
+h2{
+    position: fixed;
+    top: 80px;
+}
+
+img[alt~="left"] {
+    display: block;
+    margin: auto auto auto 30px;
+}
+
+img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+}
+
+img[alt~="right"] {
+    display: block;
+    margin: auto 30px auto auto;
+}
+</style>
+
+# Computer Programming II Lab
+張麒竑
+Feb 17, 2022
+
+---
+
+# Outline
+
+- 版本控制系統 - Git
+    - Git
+    - GitHub
+    - 基本操作
+    - 參考資料
+
+- LeetCode
+    - 辦個帳號來玩玩看吧
+
+- 歡樂的解題時間(?)
+    - LeetCode 1. Two Sum
+    - OJ
+
+---
+
+# 版本控制系統 - Git
+
+![center h:100](../assets/git-logo.png)
+
+---
+
+## Git
+
+- Git 可以把檔案的狀態作為更新歷史記錄保存起來。因此可以把編輯過的檔案復原到以前的狀態，也可以顯示編輯過內容的差異。
+
+- 當有人想將編輯過的舊檔案上傳到伺服器、覆蓋其他人的最新檔案時，系統會發出警告，因此可以避免在無意中覆蓋他人的編輯內容。
+
+---
+
+## Git
+
+![center h:400](../assets/git-workflow.png)
+
+---
+
+## 基本操作
+
+- 在自己的 GitHub 上面創建一個資料夾
+![center h:350](../assets/github-create-repo.png)
+
+---
+
+## 基本操作
+
+- 將 GitHub 上面的資料夾下載到自己的電腦 Local 端
+    ```bash
+    git clone <repository_url>
+    ```
+
+    ```bash
+    (^o^) [cch] [~/Documents] $ git clone git@github.com:chang861224/1102cp2.git
+    Cloning into '1102cp2'...
+    remote: Enumerating objects: 3, done.
+    remote: Counting objects: 100% (3/3), done.
+    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    Receiving objects: 100% (3/3), done.
+    (^o^) [cch] [~/Documents] $ ls -l
+    drwxrwxr-x  3 cch cch  4096 Feb 16 21:45 1102cp2
+    drwxrwxr-x  5 cch cch  4096 Feb 16 16:27 1102cp2_lab
+    (^o^) [cch] [~/Documents] $
+    ```
+
+---
+
+## 單人多裝置（多分支）
+
+### 情劇：當你會在不同裝置上（ex. 筆電、桌機公司電腦....etc）開發同一個專案
+
+- 更新專案到最新版本
+    - 如果 local 端沒有專案資料夾：把 GitHub 上的資料夾 clone 下來
+    - 如果 local 端已有專案資料夾：更新到最新版本
+        ```bash
+        git pull 
+        ```
+- 編輯檔案（coding time....）
+- 提交更新版本
+- 上傳到 GitHub
