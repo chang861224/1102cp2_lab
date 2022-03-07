@@ -8,6 +8,7 @@ url:
 image: 
 date: 2022-02-17
 paginate: true 
+math: katex
 ---
 
 <!--
