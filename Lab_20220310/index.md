@@ -167,17 +167,61 @@ Feb 17, 2022
 
 ## 多人多分支
 
+**情境：當有多個人在相同/不同裝置上開發同一個專案** $\Rightarrow$ 會出現多種版本差異
+
+- 將 GitHub 上的專案 fork 到自己的資料夾下
+- 更新專案到最新版本
+    - 如果 local 端沒有專案資料夾：把 GitHub 上的資料夾 clone 下來
+    - 如果 local 端已有專案資料夾：**更新到最新版本**
+        ```bash
+        git pull <remote_name>
+        ```
+- 確認遠端
+    ```bash
+    git remote      # 顯示你的遠端名稱
+    git remote -v   # 顯示你的遠端名稱及所用的網址
+    git remote add <remote_name> <URL>      # 新增遠端版本庫
+    ```
+
 ---
 
-## 單人多分支
+## 多人多分支
+
+**情境：當有多個人在相同/不同裝置上開發同一個專案** $\Rightarrow$ 會出現多種版本差異
+
+- 確認分支
+    ```bash
+    git branch      # 查看所處分支
+    git branch <branch_name>        # 新增分支
+    git checkout <branch_name>      # 切換分支
+    git merge <branch_name>         # 合併分支
+    ```
+- 編輯專案（coding time....）
+- 提交更新版本
+- 上傳到 GitHub
+    ```bash
+    git push <remote_name> <branch_name>
+    ```
+- **在 GitHub 上面發 PR（Pull Request）給原始資料夾擁有者**
 
 ---
 
-## 單人多分支
+## 多人多分支
 
 ---
 
-## 單人多分支
+## 多人多分支
 
 ---
+
+## Bonus Time
+
+---
+
+## Reference
+
+- [遠端多人合作開發－單分支](https://kingofamani.gitbooks.io/git-teach/content/chapter_5/pull.html)
+- [連猴子都能懂的Git入門指南](https://backlog.com/git-tutorial/tw/stepup/stepup1_1.html)
+- [30 天精通 Git 版本控管](https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/README.md)
+- [Git Tutorial](https://git-scm.com/docs/gittutorial)
 
