@@ -18,7 +18,7 @@ math: katex
 <style>
 h2{
     position: fixed;
-    top: 40px;
+    top: 35px;
 }
 
 img[alt~="left"] {
@@ -160,9 +160,67 @@ Feb 17, 2022
 
 ## 單人多分支
 
+```bash
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (main)
+$ git branch
+* main
+
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (main)
+$ git branch new_branch
+
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (main)
+$ git branch
+* main
+  new_branch
+
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (main)
+$ git checkout new_branch
+Switched to branch 'new_branch'
+
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (new_branch)
+$ git branch
+  main
+* new_branch
+```
+
 ---
 
 ## 單人多分支
+
+```bash
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (new_branch)
+$ vim new.txt
+
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (new_branch)
+$ git add new.txt
+
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (new_branch)
+$ git commit -m "add new"
+[new_branch cd4c010] add new
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new.txt
+
+Chi-Hung Chang@cch20-pc MINGW64 ~/Documents/1102cp2 (new_branch)
+$ git push origin new_branch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'new_branch' on GitHub by visiting:
+remote:      https://github.com/chang861224/1102cp2/pull/new/new_branch
+remote:
+To https://github.com/chang861224/1102cp2.git
+ * [new branch]      new_branch -> new_branch
+```
+
+---
+
+## 單人多分支
+
+![center h:500](../assets/github-branches.png)
 
 ---
 
@@ -209,9 +267,36 @@ Feb 17, 2022
 
 ## 多人多分支
 
+`fork` 在右上角的右邊第二個
+
+![center h:450](../assets/github-fork.png)
+
 ---
 
 ## 多人多分支
+
+確認遠端
+
+```bash
+(^o^) [cch] [~/Documents/CPLab] $ git remote -v
+origin  https://github.com/josix/CPLab.git (fetch)
+origin  https://github.com/josix/CPLab.git (push)
+(^o^) [cch] [~/Documents/CPLab] $ git remote add upstream https://github.com/chang861224/CPLab.git
+(^o^) [cch] [~/Documents/CPLab] $ git remote -v
+origin  https://github.com/josix/CPLab.git (fetch)
+origin  https://github.com/josix/CPLab.git (push)
+upstream        https://github.com/chang861224/CPLab.git (fetch)
+upstream        https://github.com/chang861224/CPLab.git (push)
+(^o^) [cch] [~/Documents/CPLab] $
+```
+
+---
+
+## 多人多分支
+
+發 PR 向原資料夾作者要求合併
+
+![center h:450](../assets/github-PR.png)
 
 ---
 
