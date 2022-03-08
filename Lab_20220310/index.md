@@ -83,7 +83,7 @@ Feb 17, 2022
 ## 基本操作
 
 - 在自己的 GitHub 上面創建一個資料夾
-![center h:350](../assets/github-create-repo.png)
+![center h:500](../assets/github-create-repo.png)
 
 ---
 
