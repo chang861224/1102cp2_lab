@@ -46,17 +46,12 @@ Feb 17, 2022
 # Outline
 
 - 版本控制系統 - Git
-    - Git
-    - GitHub
-    - 基本操作
-    - 參考資料
-
-- LeetCode
-    - 辦個帳號來玩玩看吧
-
-- 歡樂的解題時間(?)
-    - LeetCode 1. Two Sum
+    - 單人多裝置（多分支）
+    - 單人多分支
+    - 多人多分支
+- 歡樂的解題時間
     - OJ
+    - LeetCode
 
 ---
 
@@ -129,11 +124,47 @@ Feb 17, 2022
 
 如果你沒有更新的話....
 
+```bash
+(^o^) [cch] [~/Downloads/1102cp2] $ vim doc.txt
+(^o^) [cch] [~/Downloads/1102cp2] $ git add doc.txt
+(^o^) [cch] [~/Downloads/1102cp2] $ git commit -m "Download folder modify"
+[main 760bee6] Download folder modify
+ 1 file changed, 1 insertion(+)
+ create mode 100644 doc.txt
+(^o^) [cch] [~/Downloads/1102cp2] $ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 366 bytes | 122.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/chang861224/1102cp2.git
+   a858527..760bee6  main -> main
+```
+
 ---
 
 ## 單人多裝置（多分支）
 
 上傳的時候就會噴錯誤訊息
+
+```bash
+(^o^) [cch] [~/Documents/1102cp2] $ vim doc1.txt
+(^o^) [cch] [~/Documents/1102cp2] $ git add doc1.txt
+(^o^) [cch] [~/Documents/1102cp2] $ git commit -m "Document folder modify"
+[main f080779] Document folder modify
+ 1 file changed, 1 insertion(+)
+ create mode 100644 doc1.txt
+(^o^) [cch] [~/Documents/1102cp2] $ git push origin main
+To https://github.com/chang861224/1102cp2.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/chang861224/1102cp2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
 
 ---
 
