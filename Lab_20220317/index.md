@@ -6,7 +6,7 @@ author: Chi-Hung Chang
 keywords: git GitHub
 url:
 image: 
-date: 2022-02-17
+date: 2022-03-17
 paginate: true 
 math: katex
 ---
@@ -39,7 +39,7 @@ img[alt~="right"] {
 
 # Computer Programming II Lab
 張麒竑
-Feb 17, 2022
+Mar 17, 2022
 
 ---
 
@@ -49,9 +49,8 @@ Feb 17, 2022
     - 單人多裝置（多分支）
     - 單人多分支
     - 多人多分支
-- 歡樂的解題時間
-    - OJ
-    - LeetCode
+- Online Judge
+- LeetCode
 
 ---
 
@@ -335,15 +334,15 @@ upstream        https://github.com/chang861224/CPLab.git (push)
 
 **這些動作要在今天 23:59 前完成，才會有 bonus 喔！**
 
-1. 在 GitHub 上面找到 chang861224/1102CP2_Lab0310 這個資料夾
+1. 在 GitHub 上面找到 chang861224/1102CP2_Lab0317 這個資料夾
 2. 將這個資料夾 fork 到你自己的 GitHub 上
 3. 將你 fork 來的這個資料夾 clone 到你的電腦 local 端
 4. 創建一個 branch，名稱是「**NCCU_<你的學號>**」
-5. 在這個 branch 裡面新增一個檔案，檔名是「Lab0310_<你的學號>.txt」，檔案內容則是找一首歌，把歌名和歌詞貼過來
+5. 在這個 branch 裡面新增一個檔案，檔名是「Lab0317_<你的學號>.txt」，檔案內容則是找一首歌，把歌名和歌詞貼過來
 6. 在 commit 打「<你的學號>: <歌名>」
 7. 將更新後的這個分支 push 到你自己的 GitHub 上，然後發一個 PR 給我
 
-註：要在「**你的 branch 上傳然後發 PR**」，而不是直接在你的 main 分支上傳！
+註：要在「**你新增的 branch 上傳然後發 PR**」，而不是直接在你的 main 分支上傳！
 
 ---
 
@@ -354,3 +353,16 @@ upstream        https://github.com/chang861224/CPLab.git (push)
 - [30 天精通 Git 版本控管](https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/README.md)
 - [Git Tutorial](https://git-scm.com/docs/gittutorial)
 
+---
+
+# Online Judge
+
+---
+
+# LeetCode
+
+[https://leetcode.com/problems/add-two-numbers](https://leetcode.com/problems/add-two-numbers)
+
+---
+
+# Any Question?
