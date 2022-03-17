@@ -378,4 +378,15 @@ upstream        https://github.com/chang861224/CPLab.git (push)
 
 ---
 
+# CPE
+
+知道你們要過兩題才能畢業吧～
+
+- 考試時間：2022/03/22
+- 報名截止時間：2022
+
+早點考完就至少可以確定可以畢業了～
+
+---
+
 # Any Question?
