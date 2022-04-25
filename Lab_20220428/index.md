@@ -10,10 +10,6 @@ paginate: true
 math: katex
 ---
 
-<!--
-  backgroundImage: "linear-gradient(to bottom, #C4E1FF, #84C1FF)"
--->
-
 <style>
 h2{
     position: absolute;
@@ -123,13 +119,7 @@ April 28, 2022
 
 - 多人合作的第一件事，一定要先 `git pull`！！
 
-（圖）
-
----
-
-## 多人合作
-
-（圖）
+![h:400 center](../assets/git-pull.png)
 
 ---
 
@@ -137,11 +127,17 @@ April 28, 2022
 
 - 如果你沒有先 pull 的話....
 
-（圖）
+![h:300 center](../assets/conflict-log.png)
 
 ---
 
-## 如果你發現你的城市完全寫錯了....
+## 多人合作
+
+![h:400 center](../assets/conflict-monkey.png)
+
+---
+
+## 如果你發現你的程式完全寫錯了....
 
 ```bash
 git reset --hard
@@ -169,8 +165,6 @@ git reset --hard
 
 ## Bonus Time
 
-**這些動作要在今天 23:59 前完成，才會有 bonus 喔！**
-
 5. 在這裡修改你上次檔名為「Lab0317_<你的學號>.txt」的歌詞，在檔案的最前面新增歌名和作詞、作曲人
 6. 在 commit 打「[add info] <你的學號>: <歌名>」
 7. 將更新後的這個分支 push 到你自己的 GitHub 上，然後發一個 PR 給我
@@ -181,7 +175,7 @@ git reset --hard
 
 ## Reference
 
-- [連猴子都能懂的Git入門指南](https://backlog.com/git-tutorial/tw/stepup/stepup1_1.html)
+- [連猴子都能懂的Git入門指南](https://backlog.com/git-tutorial/tw/stepup/stepup2_7.html)
 - [30 天精通 Git 版本控管](https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/README.md)
 - [Git Tutorial](https://git-scm.com/docs/gittutorial)
 
@@ -196,3 +190,4 @@ git reset --hard
 ---
 
 # Any Question?
+
