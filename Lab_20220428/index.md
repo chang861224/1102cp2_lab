@@ -156,7 +156,7 @@ git reset --hard
 
 1. 進入之前 clone 到你的電腦 local 端的 **1102CP2_Lab0317** 資料夾
     （如果已經砍掉的話，就在你自己的 GitHub 上面再 clone 一次）
-2. 用 `git remote` 新增 [git@guthub.com:chang861224/1102CP2_Lab0317.git](git@guthub.com:chang861224/1102CP2_Lab0317.git) 這個遠端網址
+2. 用 `git remote` 新增 [git@github.com:chang861224/1102CP2_Lab0317.git](git@github.com:chang861224/1102CP2_Lab0317.git) 這個遠端網址
     （用 git bash 的人，麻煩新增 [https://github.com/chang861224/1102CP2_Lab0317.git](https://github.com/chang861224/1102CP2_Lab0317.git)）
 3. 將你的電腦 local 端的 1102_CP2_Lab0317 資料夾更新到最新版本（要更新到跟我的 GitHub 一樣才是最新版本）
 4. 進入上次你創建的「**NCCU_<你的學號>**」這個 branch
@@ -249,7 +249,7 @@ $\rm l_a$ 與 $\rm r_a$ 是 $A$ 的子陣列的範圍，$\rm l_b$ 與 $\rm r_b$ 
 
 # LeetCode
 
-[34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+[274. H-Index](https://leetcode.com/problems/h-index/)
 
 ---
 
