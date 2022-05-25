@@ -40,13 +40,69 @@ June 2, 2022
 
 # Outline
 
-- 
+- Terminal
+- Makefile
 - Online Judge
 - LeetCode
 
 ---
 
-# 
+# Terminal
+
+- Ubuntu
+- WSL
+- zsh
+- Linux Commands
+
+---
+
+## Ubuntu
+
+---
+
+## WSL (Windows Subsystem for Linux)
+
+適用於 Linux 的 Windows 子系統可讓開發人員執行 GNU/Linux 環境（包括大部分的命令列工具、公用程式和應用程式），直接在 Windows 上執行，不需進行修改，不會造成傳統虛擬機器或 dualboot 設定的額外負荷。
+
+- 執行一般的命令列工具
+- 執行 Bash 命令介面指令碼和 GNU/Linux 命令列應用程式
+- 使用自己的 GNU/Linux 散發套件管理員安裝其他軟體
+- 使用類似 Unix 的命令列命令介面來叫用 Windows 應用程式
+- 在 Windows 上叫用 GNU/Linux 應用程式
+
+---
+
+## WSL (Windows Subsystem for Linux)
+
+If 如果假設你想裝的話....
+
+- 先決條件
+    - Windows 10 2004 或更新版本，或 Windows 11
+    - [舊版 WSL 手動安裝](https://docs.microsoft.com/zh-tw/windows/wsl/install-manual)
+- 安裝步驟
+    - 以**系統管理員**開啟 PowerShell 或 Windows cmd（命令提示字元）
+    - 查看版本清單
+        ```bash
+        wsl --list --online
+        ```
+    - 指定版本安裝
+        ```bash
+        wsl --install <DistroName>
+        ```
+    - 重新開機
+    - 開機完後，系統會自己跳出視窗，把後續該安裝好的都安裝好，此時....呼吸就好
+
+---
+
+## zsh
+
+---
+
+## Linux Commands
+
+---
+
+# Makefile
 
 ---
 
