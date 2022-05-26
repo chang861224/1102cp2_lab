@@ -217,6 +217,139 @@ source ~/.zshrc
 
 ## Linux Commands
 
+一些基本、你們早該會、不會應該活不到現在的指令：`cd`、`ls`、`cp`、`mv`、`rm` 等 
+
+在這裡，我想教幾個或許你們現在不常用或不會用到，但以後或許有機會會用到的指令
+
+---
+
+## Linux Commands
+
+`sh`
+
+執行 shell script 的指令
+
+- Shell script 就像是早期 DOS 年代的批次檔（.bat），最簡單的功能就是將許多指令彙整寫在一起， 讓使用者很輕易的就能夠 one touch 的方法去處理複雜的動作（執行一個檔案「shell script」，就能夠一次執行多個指令）
+- 提供陣列、迴圈、條件與邏輯判斷等重要功能，讓使用者也可以直接以 shell 來撰寫程式，而不必使用類似 C 程式語言等傳統程式撰寫的語法
+
+例如：
+
+```sh
+# run.sh
+./a.exe
+./b.exe
+./c.exe
+```
+
+```bash
+sh run.sh
+```
+
+---
+
+ ## Linux Commands
+
+`htop`
+
+查看電腦使用狀態（需另外安裝套件）
+
+```bash
+htop
+```
+
+---
+
+## Linux Commands
+
+`head`、`tail`
+
+查看該檔案的最前面（最後面）\(n\) 行的內容（預設 \(n = 10\)）
+
+例如：
+
+```bash
+head -n 5 a.txt     # 輸出 a.txt 的最前面 5 行內容
+tail -n 20 b.txt    # 輸出 b.txt 的最後 20 行內容
+```
+
+---
+
+## Linux Commands
+
+`&&`、`|`
+
+- `&&` 是將多個指令串成一串，並照順序執行（若中間某部分出現錯誤，則後續的指令都不會執行）
+- `|` 是將左邊的指令結果輸出導入給右邊使用
+
+例如：
+
+```bash
+./a.exe && ./b.exe          # 先執行 a.exe 再執行 b.exe（若 a.exe 錯誤則不執行 b.exe）
+head a.txt | tail -n 5      # 將 a.txt 的前 10 行找出來，導入給右邊找出這 10 行的最後 5 行
+```
+
+---
+
+## Linux Commands
+
+`&`、`kill`
+
+- `&` 是背景執行，即電腦仍有在執行你下的指令，但還是可以用同一個終端機做其他事
+- `kill` 是終止正在執行的程式
+
+例如：
+
+```bash
+./run.exe &     # [1] 10919
+
+# 解釋：
+# 1. 在背景執行 run.exe，執行 ID 為 10919
+# 2. 此時若程式尚未執行完畢，仍可做其他事
+
+
+kill 10919      # 將 ID 為 10919 的執行動作終止
+```
+
+---
+
+## Linux Commands
+
+`>`、`>>`、`2>`
+
+- `>` 和 `>>` 是將程式（或指令）執行的結果導入到某個檔案中（`>` 是將原本的檔案洗掉重新寫；`>>` 是將原本的檔案保留，並接下去寫）
+- `2>` 是將程式（或指令）執行的 **錯誤訊息** 導入到某個檔案中（沒錯誤的話就沒事，這個檔案會是空的）
+
+例如：
+
+```bash
+(./main.exe > rlt.txt) 2> err.txt
+
+# 解釋：
+# 1. 執行 main.exe，將結果輸出導入 rlt.txt
+# 2. 若出現程式執行錯誤，則導入 err.txt
+```
+
+--- Linux Commands
+
+`tmux`
+
+終端機管理工具，可以分割視窗，並同時開啟多個終端機（需另外安裝套件）
+
+常用指令：
+
+- 分割視窗
+    - `Ctrl` + `b`, `%`：垂直分割視窗
+    - `Ctrl` + `b`, `"`：水平分割視窗
+    - `Ctrl` + `b`, `方向鍵`：切換到指定方向的視窗
+    - `Ctrl` + `b`, `x`：關閉目前所在視窗
+- 多個 window
+    - `Ctrl` + `b`, `c`：建立新 window
+    - `Ctrl` + `b`, `w`：以視覺化選單切換 window
+    - `Ctrl` + `b`, `n`：切換到下一個 window
+    - `Ctrl` + `b`, `p`：切換到上一個 window
+    - `Ctrl` + `b`, `數字鍵`：切換到指定 window
+    - `Ctrl` + `b`, `&`：關閉目前所在 window
+
 ---
 
 # Makefile
@@ -233,6 +366,8 @@ source ~/.zshrc
 - [Bash（維基百科）](https://zh.wikipedia.org/zh-tw/Bash)
 - [Z Shell（維基百科）](https://zh.wikipedia.org/zh-tw/Z_shell)
 - [Ubuntu 安裝 Zsh + Oh My Zsh + Powerlevel10k 與各種插件](https://www.kwchang0831.dev/dev-env/ubuntu/oh-my-zsh)
+- [鳥哥私房菜 - 第十二章、學習 Shell Scripts](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php)
+- [Linux tmux 終端機管理工具使用教學](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/)
 
 ---
 
