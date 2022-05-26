@@ -53,6 +53,7 @@ June 2, 2022
 - WSL
 - Bash & zsh
 - Linux Commands
+- Vim
 
 ---
 
@@ -352,7 +353,223 @@ kill 10919      # 將 ID 為 10919 的執行動作終止
 
 ---
 
+## Vim
+
+常用的一些 vim 指令，雖然你們以後不一定會用（搞不好都用 vscode 去了），但現在還是再來複習一次
+
+- `V`：highlight 一整行
+- `d`：刪除（說剪下更貼切）
+- `p`：在下一行貼上
+- `u`：回到上一步（無法在回去下一步的！按之前請三思！）
+- `/<string>`：搜尋字串並反白（當搜尋到後，可以按 `*` 和 `#` 控制往前往後跳一個）
+- `:w`：寫入檔案（存檔）
+- `:q`：退出
+
+除了複習，來教幾個我偶爾會用到的幾個常用的
+
+- `:%s/<string1>/<string2>/[g/gi/gc]`：將字串 `<string1>` 帶換成字串 `<string2>`，`g`/`gi`/`gc` 是控制項
+- `:!`：暫時跳到 terminal（只能看，無法做任何動作）
+- `:!<Unix_command>`：暫時跳到 terminal，並執行輸入指令的操作，但不能做任何動作
+- `:set <command>`：在當下的 vim 上做版面設定（但跳出後不保留）
+
+---
+
+## Vim
+
+接下來，我們來提一下 vim 設定檔
+
+- Vim 的設定檔是 `~/.vimrc`，所有預設的 vim 環境和配置都可以在這裡進行修改
+- 一些常用的設定
+    ```
+    set nu
+    ```
+
+---
+
 # Makefile
+
+- gcc/g++ 編譯器
+- 簡單 Makefile 寫法
+
+---
+
+## gcc/g++ 編譯器
+
+假設你現在有一個 `hello.c` 這個 C 語言檔案
+
+```c
+#include <stdio.h>
+int main(){
+    printf("Hello world!!\n");
+    return 0;
+}
+```
+
+C 語言的編譯是大家都知道的 `gcc`
+
+```bash
+gcc hello.c
+```
+
+GCC 預設會執行編譯和連結，並產生一個可執行檔 `a.out`
+
+```bash
+./a.out
+```
+
+如果要自訂執行檔名稱，就加一個參數 `-o`，並加上你要的檔名
+
+```bash
+gcc -o hello.exe hello.c
+./hello.exe
+```
+
+---
+
+## gcc/g++ 編譯器
+
+同理，假設你現在有一個 `hello.cpp` 這個 C++ 檔案
+
+C++ 的編譯指令是 `g++`，其他跟 `gcc` 基本上一樣
+
+```bash
+g++ hello.cpp
+./a.out
+```
+
+若要自訂執行檔檔名，一樣加一個參數 `-o`，並加上檔名
+
+```bash
+g++ -o hello.exe hello.cpp
+./hello.exe
+```
+
+gcc/g++ 還有很多的參數可以加，像是一些除錯參數之類的，啊因為這些東西要會用的人才會用，我....好像沒用過XD，所以有需要可以自己查～
+
+---
+
+## gcc/g++ 編譯器
+
+gcc/g++ 預設會將編譯和連結都執行，並產生一個執行檔，而將「編譯」和「連結」分開來看的話，就會是
+
+- 編譯：加入參數 `-c`，這樣就會建立出一個 object 檔（`.o`）
+    ```bash
+    gcc -c hello.c      # 產生 hello.o
+    ```
+- 連結：利用 object 檔（`.o`）進行連結，並用 `-o` 指定執行檔檔名
+    ```bash
+    gcc -o hello.exe hello.o
+    ```
+
+---
+
+## gcc/g++ 編譯器
+
+在一些大型的 C/C++ 專案上，通常會將編譯和連結兩個動作拆開，例如下面的例子：
+
+```bash
+# 個別編譯 .c 檔
+gcc -c a.c
+gcc -c b.c
+gcc -c c.c
+
+# 連結
+gcc -o main.exe a.o b.o c.o
+```
+
+將編譯和連結分開的話，可以加快編譯的速度，例如我們更改過 `b.c`，我們只需要重新編譯 `b.c` 再做連結就好了，不需要把 `a.c` 和 `c.c` 也重新編譯一次
+
+---
+
+## Makefile
+
+Makefile 裡主要包含了五個東西：顯式規則、隱式規則、變量定義、文件指示和註釋。
+
+- **顯式規則**：顯式規則表示如何生成一個或多個目標文件
+- **隱式規則**：比較簡略地書寫 Makefile 規則，例如規則中有 `.o` 文件，make 會自動的把 `.c` 文件也加入依賴關係中
+- **變數定義**：類似 C 語言中的 `#define`，定義的變數都會置換到引用位置上
+- **文件指示**：
+    - 類似 C 語言中的 `#include`，一個 Makefile 中引用另一個 Makefile，如 `include makefile.inc`
+    - 類似 C 語言中的 預編譯 `#if`，根據某些情況指定 Makefile 中的有效部分
+- **註釋與換行**：Makefile 中只有行註釋，用 `#` 符號；換行則是使用 `\` 符號
+
+---
+
+## Makefile
+
+`make` 工作流程
+
+1. `make` 會在當前目錄下按順序找尋文件名為 `GNUmakefile`、`makefile` 或 `Makefile` 的文件
+2. 在 `makefile` 文件中的找到第一個目標文件，並把這個文件作為最終的目標文件
+3. 如果沒找到或目標文件所依賴的文件，或修改時間要比目標文件新，則 `make` 將執行後面所定義的命令來生成這個文件，如此遞迴下去找到文件彼此的依賴關係，直到最終編譯出第一個目標文件
+
+---
+
+## Makefile
+
+`Makefile` 基本結構有
+
+- Target
+    一個目標檔，可以是 object 檔，也可以是執行檔，還可以是一個標籤
+- Dependency
+    要產生目標檔所需要依賴的檔案（們）
+- Command
+    - 建立專案時需要執行的 shell 指令
+    - 每行都必須縮排，且 **必須使用 `Tab`**，不能使用多個空格
+
+---
+
+## Makefile
+
+變數的使用
+
+- 使用 `=` 來給予初始值
+- 取用時要用 `$(obj)` 
+
+```
+CC = gcc
+EXE = main.exe
+OBJS = main.o utils.o
+
+$(EXE) : $(OBJS)
+	$(CC) -o $(EXE) $(OBJS)
+
+$(OBJS) : defs.h
+```
+
+---
+
+## Makefile
+
+`Makefile` 中還會使用一些自動化變數，這其實也是 `Makefile` 最難讀的地方 OAO
+
+- `$@`：目前的 target
+- `$<`：目前的 dependency
+- `$*`：目前的 dependency，但不含副檔名
+- `$?`：需要重建（被修改）的 dependency
+- `%`：萬用配對字元
+
+---
+
+## Makefile
+
+```
+CC = gcc
+CFLAGS = -lm
+EXE = main.exe
+OBJS = main.o foo.o utils.o
+
+all : $(EXE)
+
+$(EXE) : $(OBJS)
+	$(CC) $(CFLAGS) -o $(EXE) $(OBJS)
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean :
+	rm $(EXE) $(OBJS)
+```
 
 ---
 
@@ -368,6 +585,8 @@ kill 10919      # 將 ID 為 10919 的執行動作終止
 - [Ubuntu 安裝 Zsh + Oh My Zsh + Powerlevel10k 與各種插件](https://www.kwchang0831.dev/dev-env/ubuntu/oh-my-zsh)
 - [鳥哥私房菜 - 第十二章、學習 Shell Scripts](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php)
 - [Linux tmux 終端機管理工具使用教學](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/)
+- [GCC 編譯器基本使用教學與範例](https://blog.gtwang.org/programming/gcc-comipler-basic-tutorial-examples/)
+- [簡單學 makefile：makefile 介紹與範例程式](https://mropengate.blogspot.com/2018/01/makefile.html)
 
 ---
 
