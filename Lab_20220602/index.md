@@ -598,6 +598,7 @@ clean :
 - [Linux tmux 終端機管理工具使用教學](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/)
 - [GCC 編譯器基本使用教學與範例](https://blog.gtwang.org/programming/gcc-comipler-basic-tutorial-examples/)
 - [簡單學 makefile：makefile 介紹與範例程式](https://mropengate.blogspot.com/2018/01/makefile.html)
+- [vi / vim 搜尋並取代字串](https://www.ltsplus.com/linux/vi-vim-search-and-replace-string)
 
 ---
 
