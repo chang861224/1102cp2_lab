@@ -86,6 +86,10 @@ If 如果假設你想裝的話....
 - 先決條件
     - Windows 10 2004 或更新版本，或 Windows 11
     - [舊版 WSL 手動安裝](https://docs.microsoft.com/zh-tw/windows/wsl/install-manual)
+    
+---
+
+## WSL (Windows Subsystem for Linux)
 - 安裝步驟
     - 以 **系統管理員** 開啟 PowerShell 或 Windows cmd（命令提示字元）
     - 查看版本清單
@@ -182,10 +186,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
     ```bash
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     ```
-- zsh-z（這個我沒用過XD）
-    ```bash
-    git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
-    ```
 
 ---
 
@@ -199,14 +199,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 vim ~/.zshrc
 ```
 
-- 修改主題
-    ```
-    ZSH_THEME="powerlevel10k/powerlevel10k"
-    ```
-- 新增啟動的插件（看你有安裝什麼就寫什麼上去）
-    ```
-    plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-z)
-    ```
+```
+ZSH_THEME="powerlevel10k/powerlevel10k"     # 修改主題
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)   # 新增啟動的插件
+```
 
 啟動！！
 
@@ -233,6 +229,9 @@ source ~/.zshrc
 - Shell script 就像是早期 DOS 年代的批次檔（.bat），最簡單的功能就是將許多指令彙整寫在一起， 讓使用者很輕易的就能夠 one touch 的方法去處理複雜的動作（執行一個檔案「shell script」，就能夠一次執行多個指令）
 - 提供陣列、迴圈、條件與邏輯判斷等重要功能，讓使用者也可以直接以 shell 來撰寫程式，而不必使用類似 C 程式語言等傳統程式撰寫的語法
 
+---
+
+## Linux Commands
 例如：
 
 ```sh
@@ -307,7 +306,6 @@ head a.txt | tail -n 5      # 將 a.txt 的前 10 行找出來，導入給右邊
 # 1. 在背景執行 run.exe，執行 ID 為 10919
 # 2. 此時若程式尚未執行完畢，仍可做其他事
 
-
 kill 10919      # 將 ID 為 10919 的執行動作終止
 ```
 
@@ -330,7 +328,9 @@ kill 10919      # 將 ID 為 10919 的執行動作終止
 # 2. 若出現程式執行錯誤，則導入 err.txt
 ```
 
---- Linux Commands
+---
+
+## Linux Commands
 
 `tmux`
 
@@ -343,6 +343,11 @@ kill 10919      # 將 ID 為 10919 的執行動作終止
     - `Ctrl` + `b`, `"`：水平分割視窗
     - `Ctrl` + `b`, `方向鍵`：切換到指定方向的視窗
     - `Ctrl` + `b`, `x`：關閉目前所在視窗
+
+---
+
+## Linux Commands
+
 - 多個 window
     - `Ctrl` + `b`, `c`：建立新 window
     - `Ctrl` + `b`, `w`：以視覺化選單切換 window
@@ -364,6 +369,10 @@ kill 10919      # 將 ID 為 10919 的執行動作終止
 - `/<string>`：搜尋字串並反白（當搜尋到後，可以按 `*` 和 `#` 控制往前往後跳一個）
 - `:w`：寫入檔案（存檔）
 - `:q`：退出
+
+---
+
+## Vim
 
 除了複習，來教幾個我偶爾會用到的幾個常用的
 
@@ -416,6 +425,10 @@ GCC 預設會執行編譯和連結，並產生一個可執行檔 `a.out`
 ```bash
 ./a.out
 ```
+
+---
+
+## gcc/g++ 編譯器
 
 如果要自訂執行檔名稱，就加一個參數 `-o`，並加上你要的檔名
 
@@ -572,8 +585,6 @@ clean :
 ```
 
 ---
-
-## Reference
 
 - [Ubuntu（維基百科）](https://zh.m.wikipedia.org/zh-tw/Ubuntu)
 - [(Ubuntu)安裝Win10 Ubunto18.04 雙系統](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/ubuntu-%E5%AE%89%E8%A3%9Dwin10-ubunto18-04-%E9%9B%99%E7%B3%BB%E7%B5%B1-a53870382df6)
