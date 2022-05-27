@@ -107,6 +107,12 @@ If 如果假設你想裝的話....
 
 ## WSL (Windows Subsystem for Linux)
 
+![center h:500](../assets/wsl.png)
+
+---
+
+## WSL (Windows Subsystem for Linux)
+
 額外的一些小癖好....
 
 因為我實在是不太喜歡 Windows cmd 用的新細明體，所以我推薦用 **終端機**（或者叫 **terminal**）來使用 WSL！
@@ -259,6 +265,8 @@ sh run.sh
 htop
 ```
 
+![center h:300](../assets/htop.png)
+
 ---
 
 ## Linux Commands
@@ -338,6 +346,18 @@ kill 10919      # 將 ID 為 10919 的執行動作終止
 
 終端機管理工具，可以分割視窗，並同時開啟多個終端機（需另外安裝套件）
 
+```bash
+# 安裝 tmux 套件
+sudo apt install tmux
+
+# 執行 tmux
+tmux
+```
+
+---
+
+## Linux Commands
+
 常用指令：
 
 - 分割視窗
@@ -349,6 +369,8 @@ kill 10919      # 將 ID 為 10919 的執行動作終止
 ---
 
 ## Linux Commands
+
+常用指令：
 
 - 多個 window
     - `Ctrl` + `b`, `c`：建立新 window
@@ -392,8 +414,16 @@ kill 10919      # 將 ID 為 10919 的執行動作終止
 - Vim 的設定檔是 `~/.vimrc`，所有預設的 vim 環境和配置都可以在這裡進行修改
 - 一些常用的設定
     ```
-    set nu
+    set number/nonumber     # 設定行數顯示
+    set ignorecase/noignorecase     # 設定忽略大小寫搜尋
+    set hlsearch/nohlsearch         # 設定搜尋結果反白
+    set insearch/noinsearch         # 設定加強版搜尋
+    set cindent/nocindent           # 設定自動縮排功能
+    set expandtab/noexpandtab       # 設定 TAB 和空格處理
+    set tabstop=4
+    set swiftwidth=4
     ```
+`.vimrc` 的模板可以參考 [個人化自己的vim文字編輯器(.vimrc設定教學)](https://magiclen.org/vimrc/)
 
 ---
 
@@ -588,6 +618,8 @@ clean :
 
 ---
 
+# Reference
+
 - [Ubuntu（維基百科）](https://zh.m.wikipedia.org/zh-tw/Ubuntu)
 - [(Ubuntu)安裝Win10 Ubunto18.04 雙系統](https://medium.com/ai%E5%8F%8D%E6%96%97%E5%9F%8E/ubuntu-%E5%AE%89%E8%A3%9Dwin10-ubunto18-04-%E9%9B%99%E7%B3%BB%E7%B5%B1-a53870382df6)
 - [VirtualBox 虛擬機器安裝 Ubuntu Desktop 設定與使用教學](https://www.kjnotes.com/linux/29)
@@ -595,24 +627,18 @@ clean :
 - [安裝 WSL](https://docs.microsoft.com/zh-tw/windows/wsl/install)
 - [Bash（維基百科）](https://zh.wikipedia.org/zh-tw/Bash)
 - [Z Shell（維基百科）](https://zh.wikipedia.org/zh-tw/Z_shell)
+
+---
+
+# Reference
+
 - [Ubuntu 安裝 Zsh + Oh My Zsh + Powerlevel10k 與各種插件](https://www.kwchang0831.dev/dev-env/ubuntu/oh-my-zsh)
 - [鳥哥私房菜 - 第十二章、學習 Shell Scripts](https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php)
 - [Linux tmux 終端機管理工具使用教學](https://blog.gtwang.org/linux/linux-tmux-terminal-multiplexer-tutorial/)
 - [GCC 編譯器基本使用教學與範例](https://blog.gtwang.org/programming/gcc-comipler-basic-tutorial-examples/)
 - [簡單學 makefile：makefile 介紹與範例程式](https://mropengate.blogspot.com/2018/01/makefile.html)
 - [vi / vim 搜尋並取代字串](https://www.ltsplus.com/linux/vi-vim-search-and-replace-string)
-
----
-
-# Online Judge
-
----
-
-## 
-
----
-
-# LeetCode
+- [個人化自己的vim文字編輯器(.vimrc設定教學)](https://magiclen.org/vimrc/)
 
 ---
 
