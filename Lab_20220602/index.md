@@ -42,8 +42,6 @@ June 2, 2022
 
 - Terminal
 - Makefile
-- Online Judge
-- LeetCode
 
 ---
 
