@@ -657,7 +657,7 @@ git clone git@github.com:chang861224/1102cp2_lab.git
 
 ## 繳交內容
 
-1. 上傳程式碼到 moodle，並以 `player.cpp` 命名
+1. 上傳程式碼到 moodle，並以 `<學號>.cpp` 命名
 2. 書面報告以 **PDF** 檔上傳 moodle，不超過 A4 四頁，內容包含：
     - 解法、策略
     - 特別考慮的情況、因素
